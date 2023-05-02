@@ -15,14 +15,29 @@
         <foaf:nick>Nalibrarian</foaf:nick>
         <foaf:knows>
           <foaf:Person>
-            <foaf:name>Wei Liu</foaf:name>
-            <foaf:mbox_sha1sum>79b0d1f43f08470a8a261cfe707b7d1a3c100803</foaf:mbox_sha1sum>
-            <rdfs:seeAlso rdf:resource="http://www.kevenlw.name/kevenfoaf.rdf"/>
+            <foaf:name>Caveman</foaf:name>
+            <foaf:mbox_sha1sum>b1d944dd48f7ed9b159d3bc93d4f2522c2dbc355</foaf:mbox_sha1sum>
+            <rdfs:seeAlso rdf:resource="http://allkos.info/files/foaf.rdf"/>
           </foaf:Person>
         </foaf:knows>
         <foaf:mbox rdf:resource="mailto:islanderee@gmail.com"/>
         <foaf:birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
         >1985-04-23</foaf:birthday>
+        <foaf:knows>
+          <foaf:Person>
+            <foaf:name>Wei Liu</foaf:name>
+            <foaf:mbox_sha1sum>79b0d1f43f08470a8a261cfe707b7d1a3c100803</foaf:mbox_sha1sum>
+            <rdfs:seeAlso rdf:resource="http://www.kevenlw.name/kevenfoaf.rdf"/>
+          </foaf:Person>
+        </foaf:knows>
+        <foaf:knows>
+          <foaf:Person>
+            <foaf:name>Marcia Zeng Lei</foaf:name>
+            <foaf:mbox_sha1sum>84505ea338816e50cce9117d0f00bea2b0b725d1</foaf:mbox_sha1sum>
+            <rdfs:seeAlso rdf:resource="http://marciazeng.slis.kent.edu/marciaZeng.rdf"/>
+          </foaf:Person>
+        </foaf:knows>
+        <foaf:nick>Nalsi</foaf:nick>
         <foaf:account>
           <foaf:OnlineAccount>
             <foaf:accountServiceHomepage rdf:resource="http://www.skype.com"/>
@@ -30,7 +45,6 @@
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineChatAccount"/>
           </foaf:OnlineAccount>
         </foaf:account>
-        <foaf:nick>Nalsi</foaf:nick>
         <foaf:holdsAccount>
           <foaf:OnlineAccount rdf:about="http://www.slideshare.net/islanderlee">
             <foaf:accountServiceHomepage rdf:resource="http://www.slideshare.net"/>
@@ -44,13 +58,6 @@
             <dc:title>Nalibrarian</dc:title>
           </rdf:Description>
         </foaf:homepage>
-        <foaf:knows>
-          <foaf:Person>
-            <foaf:name>Marcia Zeng Lei</foaf:name>
-            <foaf:mbox_sha1sum>84505ea338816e50cce9117d0f00bea2b0b725d1</foaf:mbox_sha1sum>
-            <rdfs:seeAlso rdf:resource="http://marciazeng.slis.kent.edu/marciaZeng.rdf"/>
-          </foaf:Person>
-        </foaf:knows>
         <foaf:name>Kai Li</foaf:name>
         <foaf:holdsAccount>
           <foaf:OnlineAccount rdf:about="http://www.facebook.com/kai.lee.nalsi">
@@ -62,14 +69,6 @@
         <foaf:title>Mr.</foaf:title>
         <foaf:nick>Kai Lee</foaf:nick>
         <foaf:name>李恺</foaf:name>
-        <foaf:knows>
-          <foaf:Person>
-            <foaf:name>Caveman</foaf:name>
-            <foaf:mbox_sha1sum>b1d944dd48f7ed9b159d3bc93d4f2522c2dbc355</foaf:mbox_sha1sum>
-            <rdfs:seeAlso rdf:resource="http://allkos.info/files/foaf.rdf"/>
-          </foaf:Person>
-        </foaf:knows>
-        <foaf:nick>islanderlee</foaf:nick>
         <foaf:holdsAccount>
           <foaf:OnlineAccount rdf:about="http://twitter.com/Nalsi">
             <foaf:accountServiceHomepage rdf:resource="http://twitter.com"/>
@@ -77,11 +76,7 @@
             <foaf:accountProfilePage rdf:resource="http://twitter.com/Nalsi"/>
           </foaf:OnlineAccount>
         </foaf:holdsAccount>
-        <foaf:knows>
-          <foaf:Person>
-            <foaf:name>Cuijuan Xia</foaf:name>
-          </foaf:Person>
-        </foaf:knows>
+        <foaf:nick>islanderlee</foaf:nick>
         <foaf:weblog>
           <rdf:Description rdf:about="http://librarianforthefuture.blogspot.com/">
             <dc:title>Nalibrarian</dc:title>
@@ -92,6 +87,11 @@
             <dc:title>Syracuse University</dc:title>
           </rdf:Description>
         </foaf:schoolHomepage>
+        <foaf:knows>
+          <foaf:Person>
+            <foaf:name>Cuijuan Xia</foaf:name>
+          </foaf:Person>
+        </foaf:knows>
         <foaf:givenname>Kai</foaf:givenname>
         <foaf:holdsAccount>
           <foaf:OnlineAccount rdf:about="https://plus.google.com/u/0/117486680956962716322">
