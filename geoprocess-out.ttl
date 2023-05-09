@@ -1,0 +1,297 @@
+@prefix :            <http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#> .
+@prefix g:           <http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#> .
+@prefix geolprocess: <http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:         <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:         <http://www.w3.org/2001/XMLSchema#> .
+
+g:Участок  rdf:type      owl:Class ;
+        rdfs:subClassOf  g:Природный_объект .
+
+g:физические  rdf:type      owl:DatatypeProperty ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  g:свойства .
+
+g:прямой  rdf:type  g:Форма_поперечного_профиля_склона , owl:NamedIndividual .
+
+g:Быково  rdf:type         g:Участок , g:Берег , owl:NamedIndividual ;
+        g:latitude         "53.525997"^^xsd:float ;
+        g:longitude        "103.32429"^^xsd:float ;
+        g:крутизна         45 ;
+        g:протяженность    "400.0"^^xsd:float ;
+        g:профиль          g:выпуклый ;
+        g:является_частью  g:Береговая_зона_Братского_водохр .
+
+g:Овражная_эрозия_Хадахан
+        rdf:type                       g:Овражная , owl:NamedIndividual ;
+        g:вид_геологического_процесса  g:ГП_Хадахан ;
+        g:привел_к                     g:Овраг_Хадахан_1 .
+
+g:Озеро  rdf:type        owl:Class ;
+        rdfs:subClassOf  g:Водоем .
+
+g:      rdf:type  owl:Ontology .
+
+g:Геологические_условия
+        rdf:type  owl:Class .
+
+g:Геоморфологические_условия
+        rdf:type  owl:Class .
+
+g:Абразионный  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Тип_берега .
+
+g:latitude  rdf:type        owl:DatatypeProperty ;
+        rdfs:range          xsd:float ;
+        rdfs:subPropertyOf  g:координата .
+
+g:изменяет  rdf:type  owl:TransitiveProperty , owl:InverseFunctionalProperty , owl:ObjectProperty ;
+        rdfs:domain  g:Геологический_процесс ;
+        rdfs:range   g:Природный_объект .
+
+g:химические  rdf:type      owl:DatatypeProperty ;
+        rdfs:subPropertyOf  g:свойства .
+
+g:Суффозионный  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Геологический_процесс .
+
+g:свойства  rdf:type        owl:DatatypeProperty ;
+        rdfs:domain         g:горные_породы ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+g:Хадахан  rdf:type        owl:NamedIndividual , g:Абразионный , g:Участок , g:Берег ;
+        g:latitude         "53.56531"^^xsd:float ;
+        g:longitude        "103.281136"^^xsd:float ;
+        g:крутизна         15 ;
+        g:протяженность    "300.0"^^xsd:float ;
+        g:профиль          g:вогнутый ;
+        g:является_частью  g:Береговая_зона_Братского_водохр .
+
+g:Воронка  rdf:type      owl:Class ;
+        rdfs:subClassOf  g:Форма_экзогенного_процесса .
+
+g:водорастворимость  rdf:type  owl:DatatypeProperty ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  g:водные .
+
+g:водные  rdf:type          owl:DatatypeProperty ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  g:свойства .
+
+g:Оползень_Хадахан  rdf:type           g:Оползень , owl:NamedIndividual ;
+        g:вид_геологического_процесса  g:ГП_Хадахан .
+
+g:Братское  rdf:type  g:Водохранилище , owl:NamedIndividual .
+
+g:название  rdf:type  owl:FunctionalProperty , owl:DatatypeProperty ;
+        rdfs:domain  g:горные_породы , g:Участок , g:Водоем ;
+        rdfs:range   xsd:string .
+
+g:горные_породы  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Геологические_условия .
+
+g:аккумулирует  rdf:type    owl:ObjectProperty ;
+        rdfs:subPropertyOf  g:изменяет .
+
+g:Крутизна_склона  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Геоморфологические_условия .
+
+g:привел_к  rdf:type        owl:InverseFunctionalProperty , owl:ObjectProperty ;
+        rdfs:domain         g:Геологический_процесс ;
+        rdfs:range          g:Природный_объект ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+g:крутизна  rdf:type        owl:DatatypeProperty ;
+        rdfs:domain         g:Участок , g:Берег ;
+        rdfs:range          xsd:float ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+g:координата  rdf:type  owl:DatatypeProperty ;
+        rdfs:domain  g:Природный_объект ;
+        rdfs:range   xsd:float .
+
+g:Аккумулятивный  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Тип_берега .
+
+g:Рассвет  rdf:type        owl:NamedIndividual , g:Участок , g:Берег ;
+        g:latitude         "53.579163"^^xsd:float ;
+        g:longitude        "103.46112"^^xsd:float ;
+        g:крутизна         2 ;
+        g:крутизна_склона  g:пологий ;
+        g:протяженность    "2500.0"^^xsd:float ;
+        g:профиль          g:прямой ;
+        g:является_частью  g:Береговая_зона_Братского_водохр .
+
+g:Улей  rdf:type           g:Участок , g:Берег , owl:NamedIndividual ;
+        g:latitude         "53.59638"^^xsd:float ;
+        g:longitude        "103.594055"^^xsd:float ;
+        g:крутизна         "45.0"^^xsd:float ;
+        g:протяженность    "800.0"^^xsd:float ;
+        g:профиль          g:прямой ;
+        g:является_частью  g:Береговая_зона_Братского_водохр .
+
+g:Форма_поперечного_профиля_склона
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  g:Геоморфологические_условия .
+
+g:Овраг  rdf:type        owl:Class ;
+        rdfs:subClassOf  g:Форма_экзогенного_процесса .
+
+g:Водохранилище  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Водоем .
+
+g:Осыпь  rdf:type        owl:Class ;
+        rdfs:subClassOf  g:Гравитационный .
+
+g:Карстовый_Хадахан  rdf:type          g:Карстовый , owl:NamedIndividual ;
+        g:вид_геологического_процесса  g:ГП_Хадахан ;
+        g:привел_к                     g:Овраг_Хадахан_1 , g:Воронка_СП_Хадахан_1 .
+
+g:Неразмываемый  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Тип_берега .
+
+g:ГП_Хадахан  rdf:type  g:Геологический_процесс , owl:NamedIndividual ;
+        g:изменяет  g:Хадахан .
+
+g:Тип_берега  rdf:type  owl:Class .
+
+g:Эоловая_форма  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Форма_экзогенного_процесса .
+
+g:Воронка_СП_Хадахан_1
+        rdf:type           g:Воронка , owl:NamedIndividual ;
+        g:является_частью  g:Хадахан .
+
+g:Абразия_Хадахан  rdf:type            g:Абразия , owl:NamedIndividual ;
+        g:вид_геологического_процесса  g:ГП_Хадахан .
+
+g:Карстовый  rdf:type    owl:Class ;
+        rdfs:subClassOf  g:Геологический_процесс .
+
+g:Абразия  rdf:type      owl:Class ;
+        rdfs:subClassOf  g:Геологический_процесс .
+
+g:Ветровая_эрозия  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Эрозионный .
+
+g:отвесный  rdf:type  g:Крутизна_склона , owl:NamedIndividual .
+
+g:Овражная  rdf:type     owl:Class ;
+        rdfs:subClassOf  g:Водная_эрозия .
+
+g:Береговая_зона_Братского_водохр
+        rdf:type           g:Берег , owl:NamedIndividual ;
+        g:является_частью  g:Братское .
+
+g:Природный_объект  rdf:type  owl:Class .
+
+g:Высота_склона  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Геоморфологические_условия .
+
+g:механические  rdf:type    owl:DatatypeProperty ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  g:свойства .
+
+g:литология  rdf:type  owl:DatatypeProperty ;
+        rdfs:domain  g:горные_породы .
+
+g:Суффозия_Хадахан  rdf:type           g:Суффозионный , owl:NamedIndividual ;
+        g:вид_геологического_процесса  g:ГП_Хадахан ;
+        g:привел_к                     g:Воронка_СП_Хадахан_1 .
+
+g:средней_крутизны  rdf:type  g:Крутизна_склона , owl:NamedIndividual .
+
+g:Овраг_карстовый  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Овраг .
+
+g:выпуклый  rdf:type  g:Форма_поперечного_профиля_склона , owl:NamedIndividual .
+
+g:Обвал  rdf:type        owl:Class ;
+        rdfs:subClassOf  g:Гравитационный .
+
+g:крутой  rdf:type  g:Крутизна_склона , owl:NamedIndividual ;
+        g:крутизна  60 .
+
+g:Водоем  rdf:type       owl:Class ;
+        rdfs:subClassOf  g:Природный_объект .
+
+g:Овраг_Хадахан_1  rdf:type  g:Овраг_карстовый , owl:NamedIndividual ;
+        g:является_частью  g:Хадахан .
+
+g:развивается  rdf:type     owl:ObjectProperty ;
+        rdfs:domain         g:Природный_объект ;
+        rdfs:range          g:Геологический_процесс ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+g:размывает  rdf:type       owl:ObjectProperty ;
+        rdfs:domain         g:Абразия ;
+        rdfs:range          g:горные_породы , g:Берег ;
+        rdfs:subPropertyOf  g:разрушает .
+
+owl:topDataProperty  rdfs:domain  g:горные_породы .
+
+g:протяженность  rdf:type   owl:FunctionalProperty , owl:DatatypeProperty ;
+        rdfs:domain         g:Участок ;
+        rdfs:range          xsd:float ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+g:состоит_из  rdf:type      owl:ObjectProperty ;
+        rdfs:domain         g:Участок , g:Берег ;
+        rdfs:range          g:горные_породы ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+g:Водная_эрозия  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Эрозионный .
+
+g:Эрозионный  rdf:type   owl:Class ;
+        rdfs:subClassOf  g:Геологический_процесс .
+
+g:Берег  rdf:type        owl:Class ;
+        rdfs:subClassOf  g:Природный_объект .
+
+g:Оползень  rdf:type     owl:Class ;
+        rdfs:subClassOf  g:Форма_экзогенного_процесса , g:Гравитационный .
+
+g:Геологический_процесс
+        rdf:type  owl:Class .
+
+g:Гравитационный  rdf:type  owl:Class ;
+        rdfs:subClassOf  g:Геологический_процесс .
+
+g:профиль  rdf:type         owl:ObjectProperty ;
+        rdfs:domain         g:Участок , g:Берег ;
+        rdfs:range          g:Форма_поперечного_профиля_склона ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+g:longitude  rdf:type       owl:DatatypeProperty ;
+        rdfs:range          xsd:float ;
+        rdfs:subPropertyOf  g:координата .
+
+g:Речная  rdf:type       owl:Class ;
+        rdfs:subClassOf  g:Водная_эрозия .
+
+g:разрушает  rdf:type       owl:ObjectProperty ;
+        rdfs:domain         g:Геологический_процесс ;
+        rdfs:range          g:Берег ;
+        rdfs:subPropertyOf  g:изменяет .
+
+g:крутизна_склона  rdf:type  owl:ObjectProperty ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+g:является_частью  rdf:type  owl:TransitiveProperty , owl:ObjectProperty ;
+        rdfs:domain  g:Природный_объект ;
+        rdfs:range   g:Природный_объект .
+
+g:вогнутый  rdf:type  g:Форма_поперечного_профиля_склона , owl:NamedIndividual .
+
+g:вид_геологического_процесса
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+g:Форма_экзогенного_процесса
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  g:Природный_объект .
+
+g:пологий  rdf:type  g:Крутизна_склона , owl:NamedIndividual .

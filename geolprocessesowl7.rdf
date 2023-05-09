@@ -1,0 +1,774 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#"
+     xml:base="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:geolprocess="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#аккумулирует -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#аккумулирует">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#изменяет"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#вид_геологического_процесса -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#вид_геологического_процесса">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#изменяет -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#изменяет">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#крутизна_склона -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#крутизна_склона">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#привел_к -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#привел_к">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#профиль -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#профиль">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_поперечного_профиля_склона"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#развивается -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#развивается">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#размывает -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#размывает">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#разрушает"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Абразия"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#горные_породы"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#разрушает -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#разрушает">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#изменяет"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#состоит_из -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#состоит_из">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#горные_породы"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#является_частью -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#является_частью">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#координата"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#координата"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#водные -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#водные">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#свойства"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#водорастворимость -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#водорастворимость">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#водные"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#координата -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#координата">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#крутизна -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#крутизна">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#литология -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#литология">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#горные_породы"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#механические -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#механические">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#свойства"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#название -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#название">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водоем"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#горные_породы"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#протяженность -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#протяженность">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#свойства -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#свойства">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#горные_породы"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#физические -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#физические">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#свойства"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#химические -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#химические">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#свойства"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#горные_породы"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Абразионный -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Абразионный">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Тип_берега"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Абразия -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Абразия">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Аккумулятивный -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Аккумулятивный">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Тип_берега"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Ветровая_эрозия -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Ветровая_эрозия">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Эрозионный"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водная_эрозия -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водная_эрозия">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Эрозионный"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водоем -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водоем">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водохранилище -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водохранилище">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водоем"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Воронка -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Воронка">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_экзогенного_процесса"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Высота_склона -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Высота_склона">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геоморфологические_условия"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологические_условия -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологические_условия"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геоморфологические_условия -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геоморфологические_условия"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Гравитационный -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Гравитационный">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Карстовый -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Карстовый">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Крутизна_склона -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Крутизна_склона">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геоморфологические_условия"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Неразмываемый -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Неразмываемый">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Тип_берега"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Обвал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Обвал">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Гравитационный"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овраг -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овраг">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_экзогенного_процесса"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овраг_карстовый -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овраг_карстовый">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овраг"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овражная -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овражная">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водная_эрозия"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Озеро -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Озеро">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водоем"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Оползень -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Оползень">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Гравитационный"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_экзогенного_процесса"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Осыпь -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Осыпь">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Гравитационный"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Речная -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Речная">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водная_эрозия"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Суффозионный -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Суффозионный">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Тип_берега -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Тип_берега"/>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_поперечного_профиля_склона -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_поперечного_профиля_склона">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геоморфологические_условия"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_экзогенного_процесса -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_экзогенного_процесса">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Природный_объект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Эоловая_форма -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Эоловая_форма">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_экзогенного_процесса"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Эрозионный -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Эрозионный">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#горные_породы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#горные_породы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологические_условия"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Абразия_Хадахан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Абразия_Хадахан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Абразия"/>
+        <вид_геологического_процесса rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#ГП_Хадахан"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Береговая_зона_Братского_водохр -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Береговая_зона_Братского_водохр">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег"/>
+        <является_частью rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Братское"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Братское -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Братское">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Водохранилище"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Быково -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Быково">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок"/>
+        <профиль rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#выпуклый"/>
+        <является_частью rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Береговая_зона_Братского_водохр"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">53.525997</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">103.32429</longitude>
+        <крутизна rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</крутизна>
+        <протяженность rdf:datatype="http://www.w3.org/2001/XMLSchema#float">400.0</протяженность>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Воронка_СП_Хадахан_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Воронка_СП_Хадахан_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Воронка"/>
+        <является_частью rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Хадахан"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#ГП_Хадахан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#ГП_Хадахан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Геологический_процесс"/>
+        <изменяет rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Хадахан"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Карстовый_Хадахан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Карстовый_Хадахан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Карстовый"/>
+        <вид_геологического_процесса rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#ГП_Хадахан"/>
+        <привел_к rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Воронка_СП_Хадахан_1"/>
+        <привел_к rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овраг_Хадахан_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овраг_Хадахан_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овраг_Хадахан_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овраг_карстовый"/>
+        <является_частью rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Хадахан"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овражная_эрозия_Хадахан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овражная_эрозия_Хадахан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овражная"/>
+        <вид_геологического_процесса rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#ГП_Хадахан"/>
+        <привел_к rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Овраг_Хадахан_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Оползень_Хадахан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Оползень_Хадахан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Оползень"/>
+        <вид_геологического_процесса rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#ГП_Хадахан"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Рассвет -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Рассвет">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок"/>
+        <профиль rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#прямой"/>
+        <является_частью rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Береговая_зона_Братского_водохр"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">53.579163</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">103.46112</longitude>
+        <крутизна rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</крутизна>
+        <протяженность rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2500.0</протяженность>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Суффозия_Хадахан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Суффозия_Хадахан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Суффозионный"/>
+        <вид_геологического_процесса rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#ГП_Хадахан"/>
+        <привел_к rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Воронка_СП_Хадахан_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Улей -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Улей">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок"/>
+        <профиль rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#прямой"/>
+        <является_частью rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Береговая_зона_Братского_водохр"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">53.59638</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">103.594055</longitude>
+        <крутизна rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</крутизна>
+        <протяженность rdf:datatype="http://www.w3.org/2001/XMLSchema#float">800.0</протяженность>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Хадахан -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Хадахан">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Абразионный"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Берег"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Участок"/>
+        <профиль rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#вогнутый"/>
+        <является_частью rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Береговая_зона_Братского_водохр"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">53.56531</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">103.281136</longitude>
+        <крутизна rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</крутизна>
+        <протяженность rdf:datatype="http://www.w3.org/2001/XMLSchema#float">300.0</протяженность>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#вогнутый -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#вогнутый">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_поперечного_профиля_склона"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#выпуклый -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#выпуклый">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_поперечного_профиля_склона"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#крутой -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#крутой">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Крутизна_склона"/>
+        <крутизна rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</крутизна>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#отвесный -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#отвесный">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Крутизна_склона"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#пологий -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#пологий">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Крутизна_склона"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#прямой -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#прямой">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Форма_поперечного_профиля_склона"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#средней_крутизны -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#средней_крутизны">
+        <rdf:type rdf:resource="http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#Крутизна_склона"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
