@@ -11,6 +11,13 @@ import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntDocumentManager;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.util.iterator.ExtendedIterator;
 
@@ -22,23 +29,17 @@ import com.google.protobuf.compiler.PluginProtos.CodeGeneratorResponse.File;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        ontoMonad();
-    }
     public static String 
         url = "https://gist.githubusercontent.com/eugeneai" +
         "/141f89eace745682ece44a9fc4245085/raw/cb84c1892b642af894ac5a9d0ec19cc177552c31/" + 
         "foaf.rdf";
     public static String
-        rdfFile = "./foaf.rdf";
+        // rdfFile = "./foaf.rdf";
+        rdfFile = "./geolprocessesowl6.rdf";
     public static String
         rdfOutFile = "./foaf-out.rdf";
     public static void ontoMonad () {
-        System.out.println( "Hello from a Monad" );
         System.out.println( url );
-        System.out.println( "Hello from a Monad" );        
         OntModel model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
         OntDocumentManager manager = model.getDocumentManager();
         manager.setProcessImports(true);
@@ -52,15 +53,43 @@ public class App
             // model.write(System.out);
             model.write(writer);
             
-            for (ExtendedIterator iter = model.listIndividuals(); iter.hasNext();) { 
+            for (ExtendedIterator iter = model.listClasses(); iter.hasNext();) { 
                 OntClass tempClass = (OntClass) iter.next();
                 System.out.println(tempClass.getLocalName());
             }
-
-
-            System.out.println( "Signing OK!" );
+            System.out.println( "Writing OK!" );
         } catch (IOException exc) {
             System.out.println( "Writing problems!" );
         }
+    }
+    public static void query () {
+        OntModel model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
+        model.read(rdfFile);
+        String q1 = String.join("\n",
+              "PREFIX g: <http://www.semanticweb.org/moks/ontologies/2023/1/geolprocesses#>"
+            , "SELECT ?s"
+            , "WHERE {"
+            , "    ?s a g:Участок"
+            , "}");
+        Query query = QueryFactory.create(q1);
+        QueryExecution qexec = QueryExecutionFactory.create(query,model);
+        try {
+            ResultSet results = qexec.execSelect();
+            // for (;results.hasNext();) {
+            //     QuerySolution sol = results.nextSolution();
+            //     System.out.println(sol);
+            // }
+            ResultSetFormatter.out (results, query);
+        } finally {
+            qexec.close();
+        }
+
+    }
+    public static void main( String[] args )
+    {
+        System.out.println( "Jena based Geoprocess query tool!" );
+        ontoMonad();
+        System.out.println( "------- Try queries -----" );
+        query();
     }
 }
